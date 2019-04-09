@@ -11,7 +11,11 @@ wget https://github.com/godmao/emacs.d/archive/emacs24.3.tar.gz -O $TAR_EMACS_D
 wget https://github.com/godmao/myelpa/archive/emacs24.3.tar.gz -O $TAR_MYELPA
 
 if [ -d $POS_EMACS_D ]; then
-    mv $POS_EMACS_D ${POS_EMACS_D}_bak
+    mv -f $POS_EMACS_D ${POS_EMACS_D}_bak
+fi
+
+if [ -d $POS_MYELPA ]; then
+    mv -f $POS_MYELPA ${POS_MYELPA}_bak
 fi
 
 mkdir $POS_EMACS_D
